@@ -1,0 +1,146 @@
+.all-the-buttons{
+    height: 600px;
+    display: flex;
+    gap: 20px;
+    border: 2px solid rgb(184, 102, 102);
+    justify-content: center;
+    align-items: center;
+}
+
+.texts{
+    font-size: 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgb(164, 164, 164);
+}
+
+.shutter-out-hor::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(20, 151, 151);
+    z-index: -1;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.shutter-out-hor:hover::before{
+    transform: scaleX(1);
+}
+
+.shutter-out-hor{
+    transition: 0.5s;
+}
+
+.shutter-out-hor:hover{
+    color: white;
+}
+
+
+.shutter-in-hor::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(20, 151, 151);
+    z-index: -1;
+    transform: scale(1);
+    left: -100%;
+    transition: 0.5s;
+}
+
+.shutter-in-hor{
+    transition: 0.5s;
+}
+
+.shutter-in-hor:hover{
+    color: white;
+}
+
+.shutter-in-hor::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    right: -100%;
+    background-color: rgb(20, 151, 151);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.shutter-in-hor:hover::after{
+    right: -50%;
+}
+
+.shutter-in-hor:hover::before{
+    left: -50%;
+}
+
+.shutter-out-ver::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(20, 151, 151);
+    transform: scaleY(0);
+    transition: 0.5s;
+}
+
+.shutter-out-ver:hover::before{
+    transform: scaleY(1);
+}
+
+.shutter-in-ver::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background: rgb(20, 151, 151);
+    z-index: -1;
+    top: -100%;
+    transition: 0.5s;
+}
+
+.shutter-out-ver{
+    transition: 0.5s;
+}
+
+.shutter-out-ver:hover{
+    color: white;
+}
+
+.shutter-in-ver::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: rgb(20, 151, 151);
+    bottom: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.shutter-in-ver:hover::before{
+    top: -50%;
+}
+
+.shutter-in-ver:hover::after{
+    bottom: -50%;
+}
+
+.shutter-in-ver{
+    transition: 0.5s;
+}
+
+.shutter-in-ver:hover{
+    color: white;
+}
